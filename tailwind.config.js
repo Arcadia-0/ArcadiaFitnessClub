@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        
+        sourceSans: ['"Source Sans Pro"', 'sans-serif'],
     },
     colors:{
-     
+     primary:'#FFD700'
     }
   },
   plugins: [],
