@@ -8,12 +8,12 @@ const Services = () => {
         <h1 className="text-primary font-bold text-3xl">Our Services</h1>
       </div>
 
-      {/* Card's Container */}
-      <div className="container mx-auto flex flex-col sm:flex-row flex-wrap justify-center gap-8">
+      {/* Card's Container with Grid */}
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {CardsData.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col justify-between items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-8 h-full"
+            className="flex flex-col justify-between items-center w-full mb-8 h-full"
           >
             {/* Card Image */}
             <div className="flex justify-center items-center">
