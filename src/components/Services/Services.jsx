@@ -25,7 +25,7 @@ const Services = () => {
             </div>
 
             {/* Card Header & Content */}
-            <div className="text-center md:text-left w-full max-w-md h-full flex flex-col justify-between">
+            <div className="text-center md:text-left w-full max-w-sm h-full flex flex-col justify-between">
               <h1 className="text-primary text-xl font-semibold mb-2">
                 {item.title}
               </h1>

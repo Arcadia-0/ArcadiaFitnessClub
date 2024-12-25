@@ -61,7 +61,7 @@ const Hero = () => {
           <img
             src={heroImage2}
             alt="Hero Image 2"
-            className="w-full h-full object-cover rounded-lg shadow-lg"
+            className="w-full h-full object-cover rounded-lg"
           />
 
           {/* Carousel */}
