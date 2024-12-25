@@ -9,7 +9,7 @@ const Services = () => {
       </div>
 
       {/* Card's Container */}
-      <div className="container mx-auto flex flex-col md:flex-row flex-wrap justify-center gap-8">
+      <div className="container mx-auto flex flex-col sm:flex-row flex-wrap justify-center gap-8">
         {CardsData.map((item) => (
           <div
             key={item.id}
@@ -23,7 +23,7 @@ const Services = () => {
             />
 
             {/* Card Header & Content  */}
-            <div className="text-center w-full max-w-md">
+            <div className="text-center md:text-left w-full max-w-md">
               <h1 className="text-primary text-xl font-semibold mb-2">
                 {item.title}
               </h1>
