@@ -16,18 +16,20 @@ const Services = () => {
             className="flex flex-col justify-between items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-8 h-full"
           >
             {/* Card Image */}
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-full max-w-md mb-4"
-            />
+            <div className="flex justify-center items-center">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-60 object-cover mb-4" 
+              />
+            </div>
 
-            {/* Card Header & Content  */}
-            <div className="text-center md:text-left w-full max-w-md">
+            {/* Card Header & Content */}
+            <div className="text-center md:text-left w-full max-w-md h-full flex flex-col justify-between">
               <h1 className="text-primary text-xl font-semibold mb-2">
                 {item.title}
               </h1>
-              <p className="text-white">{item.paragraph}</p>
+              <p className="text-white flex-grow">{item.paragraph}</p>
             </div>
           </div>
         ))}
