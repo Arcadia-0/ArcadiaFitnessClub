@@ -2,14 +2,14 @@ import CardsData from "./CardsData";
 
 const Services = () => {
   return (
-    <div>
+    <div className="container mx-auto">
       {/* Title */}
-      <div className="container mx-auto text-center mb-8">
+      <div className="text-center mb-8">
         <h1 className="text-primary font-bold text-3xl">Our Services</h1>
       </div>
 
       {/* Card's Container with Grid */}
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {CardsData.map((item) => (
           <div
             key={item.id}
