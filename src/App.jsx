@@ -1,4 +1,5 @@
 import './App.css'
+import Gallery from './components/Gallery/Gallery'
 import Hero from './components/Hero/Hero'
 import Membership from './components/Membership/Membership'
 import Navbar from './components/Navbar/Navbar'
@@ -13,6 +14,7 @@ function App() {
       <Services/>
       <Slider/>
       <Membership/>
+      <Gallery/>
     </div>
   )
 }

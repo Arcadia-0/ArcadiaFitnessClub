@@ -1,8 +1,14 @@
+/* Slick carousel'ın CSS dosyasını ilk başta dahil edin */
+@import "slick-carousel/slick/slick.css"; 
+@import "slick-carousel/slick/slick-theme.css"; 
+
+/* Sonra Tailwind'in temel stillerini ekleyin */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
     background-color: #000;
     font-family: 'Source Sans Pro', sans-serif;
     overflow-x: hidden;
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
