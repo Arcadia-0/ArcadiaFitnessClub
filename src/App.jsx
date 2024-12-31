@@ -5,6 +5,7 @@ import Membership from './components/Membership/Membership'
 import Navbar from './components/Navbar/Navbar'
 import Services from './components/Services/Services'
 import Slider from './components/Slider/Slider'
+import Footer from './Footer/Footer'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Slider/>
       <Membership/>
       <Gallery/>
+      <Footer/>
     </div>
   )
 }
