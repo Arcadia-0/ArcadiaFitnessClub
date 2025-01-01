@@ -1,23 +1,10 @@
-import banner from "../../assets/membership/banner.png"
+import Banner from "./Banner";
 
 const Membership = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-        {/* Banner Image Section */}
-        <div className="relative w-full">
-            {/* Responsive banner image */}
-            <img src={banner} alt="Membership banner" className="w-full h-auto object-cover" />
-            
-            {/* Centered Text and Button */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center px-4">
-                <p className="text-white text-2xl md:text-3xl font-semibold mb-4">
-                  Take the first step towards a healthier lifestyle.
-                </p>
-                <button className="bg-red-500 text-white px-6 py-2 rounded-md hover:bg-red-600 transition duration-300">
-                  Get Started
-                </button>
-            </div>
-        </div>
+
+      <Banner/>  {/* Banner Section */}
 
         {/* Cards Section */}
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

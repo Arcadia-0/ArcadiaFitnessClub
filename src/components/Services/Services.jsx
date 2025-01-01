@@ -9,7 +9,7 @@ const Services = () => {
       </div>
 
       {/* Card's Container with Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-8">
         {CardsData.map((item) => (
           <div
             key={item.id}
@@ -20,12 +20,12 @@ const Services = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-60 object-cover mb-4"
+                className="w-full h-60 object-cover mb-4 rounded-lg"
               />
             </div>
 
             {/* Card Header & Content */}
-            <div className="text-center md:text-left w-full max-w-sm h-full flex flex-col justify-between px-4">
+            <div className="text-center md:text-left w-full max-w-sm h-full flex flex-col justify-between ">
               <h1 className="text-primary text-xl font-semibold mb-2">
                 {item.title}
               </h1>
