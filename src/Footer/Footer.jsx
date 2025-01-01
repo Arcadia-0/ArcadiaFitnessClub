@@ -31,12 +31,12 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* (Right Side) */}
+        {/* Right Side (Google Maps) */}
         <div className="w-full h-64">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249556.3980975368!2d24.7500403452179!3d60.16985737352812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920b91c29228af%3A0x2d28c156bfa6e313!2sHelsinki%2C%20Finland!5e0!3m2!1sen!2sus!4v1704035222322!5m2!1sen!2sus"
             className="w-full h-full border-0 rounded-lg"
-            allowFullScreen="true"
+            allowFullScreen={true}  // Correctly passing the boolean value
             loading="lazy"
           ></iframe>
         </div>
