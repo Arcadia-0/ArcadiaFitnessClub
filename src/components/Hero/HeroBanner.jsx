@@ -1,10 +1,14 @@
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"; 
-import "swiper/css/navigation"; 
-import { Navigation } from "swiper/modules"; 
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // React Icons import
 import herobanner from "../../assets/hero/herobanner.png";
 
 const HeroBanner = () => {
+  const swiperRef = useRef(null); // Ref to access Swiper instance
+
   const sliderContent = [
     {
       title: "Arcadia Fitness Club",
@@ -29,28 +33,29 @@ const HeroBanner = () => {
         className="w-full h-full object-cover rounded-lg"
       />
 
-      {/* Swiper Container */}
-      <div className="absolute top-1/2 left-0 transform -translate-y-1/2  bg-primary rounded-lg w-3/4 md:w-1/3">
+      {/* Swiper Container with Yellow Background */}
+      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-primary rounded-lg w-2/3 md:w-1/3  md:h-[180px] sm:h-[100px]">
         <Swiper
+          ref={swiperRef} // Ref to access Swiper instance
           spaceBetween={50}
           slidesPerView={1}
-          loop={true} 
-          navigation={true} 
-          modules={[Navigation]} 
+          loop={true}
+          modules={[Navigation]}
+          navigation={false} // Disable default navigation buttons
         >
           {/* Swiper Slide 1 */}
           <SwiperSlide className="text-center">
-            <h1 className="text-xl md:text-3xl font-bold text-black  mb-4">
+            <h1 className="text-xl md:text-3xl font-bold text-black">
               {sliderContent[0].title}
             </h1>
-            <p className="text-sm md:text-lg  text-black mb-6 leading-relaxed">
+            <p className="text-sm md:text-lg text-black mb-6 leading-relaxed">
               {sliderContent[0].description}
             </p>
           </SwiperSlide>
 
           {/* Swiper Slide 2 */}
           <SwiperSlide className="text-center">
-            <h1 className="text-xl md:text-3xl font-bold text-black  mb-4">
+            <h1 className="text-xl md:text-3xl font-bold text-black">
               {sliderContent[1].title}
             </h1>
             <p className="text-sm md:text-lg text-black mb-6 leading-relaxed">
@@ -60,7 +65,7 @@ const HeroBanner = () => {
 
           {/* Swiper Slide 3 */}
           <SwiperSlide className="text-center">
-            <h1 className="text-xl md:text-3xl font-bold text-black  mb-4">
+            <h1 className="text-xl md:text-3xl font-bold text-black">
               {sliderContent[2].title}
             </h1>
             <p className="text-sm md:text-lg text-black mb-6 leading-relaxed">
@@ -68,12 +73,27 @@ const HeroBanner = () => {
             </p>
           </SwiperSlide>
         </Swiper>
-      </div>
 
-     
-      
+        {/* Custom Navigation Buttons within the Swiper Container */}
+        <div className="absolute bottom-0 right-4 z-10 flex space-x-2">
+          {/* Previous Button */}
+          <button
+            className="text-lg text-black p-2 rounded-full  shadow-md hover:bg-yellow-500"
+            onClick={() => swiperRef.current.swiper.slidePrev()} // Go to previous slide
+          >
+            <FaArrowLeft /> {/* Left arrow symbol from React Icons */}
+          </button>
+
+          {/* Next Button */}
+          <button
+            className="text-lg text-black p-2 rounded-full  shadow-md hover:bg-yellow-500"
+            onClick={() => swiperRef.current.swiper.slideNext()} // Go to next slide
+          >
+            <FaArrowRight /> {/* Right arrow symbol from React Icons */}
+          </button>
+        </div>
       </div>
-   
+    </div>
   );
 };
 
