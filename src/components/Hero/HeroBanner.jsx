@@ -7,7 +7,7 @@ import herobanner from "../../assets/hero/herobanner.png";
 const HeroBanner = () => {
   const sliderContent = [
     {
-      title: "Welcome to Arcadia Fitness Club",
+      title: "Arcadia Fitness Club",
       description: "The best place to stay fit, healthy, and active.",
     },
     {
@@ -21,7 +21,7 @@ const HeroBanner = () => {
   ];
 
   return (
-    <div className="relative w-full h-[400px] md:h-[600px] mt-12 ">
+    <div className="relative w-full h-[400px] md:h-[600px] mt-12">
       {/* Image */}
       <img
         src={herobanner}
@@ -30,7 +30,7 @@ const HeroBanner = () => {
       />
 
       {/* Swiper Container */}
-      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 p-6 bg-primary rounded-lg w-3/4 md:w-1/3">
+      <div className="absolute top-1/2 left-0 transform -translate-y-1/2  bg-primary rounded-lg w-3/4 md:w-1/3">
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
@@ -39,18 +39,18 @@ const HeroBanner = () => {
           modules={[Navigation]} 
         >
           {/* Swiper Slide 1 */}
-          <SwiperSlide>
-            <h1 className="text-xl md:text-3xl font-bold text-black mb-4">
+          <SwiperSlide className="text-center">
+            <h1 className="text-xl md:text-3xl font-bold text-black  mb-4">
               {sliderContent[0].title}
             </h1>
-            <p className="text-sm md:text-lg text-black mb-6 leading-relaxed">
+            <p className="text-sm md:text-lg  text-black mb-6 leading-relaxed">
               {sliderContent[0].description}
             </p>
           </SwiperSlide>
 
           {/* Swiper Slide 2 */}
-          <SwiperSlide>
-            <h1 className="text-xl md:text-3xl font-bold text-black mb-4">
+          <SwiperSlide className="text-center">
+            <h1 className="text-xl md:text-3xl font-bold text-black  mb-4">
               {sliderContent[1].title}
             </h1>
             <p className="text-sm md:text-lg text-black mb-6 leading-relaxed">
@@ -59,8 +59,8 @@ const HeroBanner = () => {
           </SwiperSlide>
 
           {/* Swiper Slide 3 */}
-          <SwiperSlide>
-            <h1 className="text-xl md:text-3xl font-bold text-black mb-4">
+          <SwiperSlide className="text-center">
+            <h1 className="text-xl md:text-3xl font-bold text-black  mb-4">
               {sliderContent[2].title}
             </h1>
             <p className="text-sm md:text-lg text-black mb-6 leading-relaxed">
