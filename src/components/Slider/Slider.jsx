@@ -9,8 +9,8 @@ const SimpleSlider = () => {
   return (
     <div className="w-full h-auto">
       <Swiper
-        spaceBetween={10} 
-        slidesPerView={1} 
+        spaceBetween={0} 
+        slidesPerView={2} 
         loop={true} 
         autoplay={{
           delay: 4000, 

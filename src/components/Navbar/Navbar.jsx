@@ -1,23 +1,22 @@
 import { useState } from "react";
-// import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.png";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
- 
-  
-
-   
- 
-
   return (
     <nav className="p-4">
-      {/* Logo and Menu */}
+      {/* Logo ve Menü */}
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
-        {/* <img src={logo} alt="Logo" /> */}
+        <img 
+          src={logo} 
+          alt="Logo" 
+          className="h-16 max-w-xs object-contain" 
+          style={{ verticalAlign: "middle" }} // Logo altındaki boşluğu engelliyoruz
+        />
 
-        {/* Hamburger Button */}
+        {/* Hamburger Butonu */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="lg:hidden text-2xl text-white"
@@ -26,11 +25,11 @@ export const Navbar = () => {
         </button>
       </div>
 
-      {/* Menu Items*/}
+      {/* Menü Öğeleri */}
       <ul
         className={`${
           menuOpen ? "block" : "hidden"
-        } lg:flex lg:space-x-8 justify-center items-center mt-4 lg:mt-0 text-center`}
+        } lg:flex lg:space-x-8 justify-center items-center text-center`}
       >
         <li>
           <a className="text-xl font-bold text-primary" href="#club">
@@ -58,8 +57,8 @@ export const Navbar = () => {
           </a>
         </li>
       </ul>
-
     </nav>
   );
 };
-export default Navbar
+
+export default Navbar;
