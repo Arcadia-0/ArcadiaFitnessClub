@@ -45,6 +45,7 @@ const SimpleSlider = () => {
           <img src={slide} alt="Fitness" className="w-full h-auto rounded-lg" />
         </SwiperSlide>
       </Swiper>
+      
     </div>
   );
 };
