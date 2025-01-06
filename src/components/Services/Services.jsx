@@ -2,7 +2,7 @@ import CardsData from "./CardsData";
 
 const Services = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div id="services" className="container mx-auto px-4">
       {/* Title */}
       <div className="text-center mb-8">
         <h1 className="text-primary font-bold text-3xl">Our Services</h1>

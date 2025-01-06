@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear(); 
 
   return (
-    <footer style={{backgroundColor:'#757575'}} className="text-white pt-8 ">
+    <footer id='contact' style={{backgroundColor:'#757575'}} className="text-white pt-8 ">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
         
         {/* Left Side */}

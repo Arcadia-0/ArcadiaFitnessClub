@@ -15,7 +15,7 @@ const Gallery = () => {
   const swiperRef = useRef(null); // Create a reference for Swiper
 
   return (
-    <div className="container mx-auto py-10 px-4 relative">
+    <div id='gallery' className="container mx-auto py-10 px-4 relative">
       <Swiper
         ref={swiperRef}  // Attach the reference here
         spaceBetween={20}

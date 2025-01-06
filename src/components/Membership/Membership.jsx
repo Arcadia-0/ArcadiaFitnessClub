@@ -7,7 +7,7 @@ const Membership = () => {
       <Banner/>  {/* Banner Section */}
 
         {/* Cards Section */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div  className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 flex flex-col justify-between h-full">
             <h3 className="text-xl font-semibold mb-4">Special Woman</h3>
             <p className="text-gray-700 mb-4">A 50% discount for the first month of new and annual memberships, exclusive to female members, awaits you</p>

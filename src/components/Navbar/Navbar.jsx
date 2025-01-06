@@ -1,8 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../../assets/logo.png";
+import { FaArrowUp } from "react-icons/fa"; 
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false); // Add state for showing the back-to-top button
+
+  // Handle scroll event
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false); 
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", 
+    });
+  };
 
   return (
     <nav className="text-white shadow-md">
@@ -27,7 +50,7 @@ export const Navbar = () => {
           <ul className="flex flex-col lg:flex-row lg:space-x-8 text-center lg:text-left">
             <li>
               <a
-                href="#club"
+                href="#hero"
                 className="text-xl font-semibold hover:text-primary transition duration-300"
               >
                 Club
@@ -68,6 +91,15 @@ export const Navbar = () => {
           </ul>
         </div>
       </div>
+      {showBackToTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-4 right-4 p-3 bg-primary text-black rounded-full shadow-lg hover:bg-secondary transition"
+          aria-label="Back to top"
+        >
+          <FaArrowUp size={24} /> 
+        </button>
+      )}
     </nav>
   );
 };
