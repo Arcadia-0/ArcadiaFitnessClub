@@ -94,7 +94,7 @@ export const Navbar = () => {
       {showBackToTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 p-3 bg-primary text-black rounded-full shadow-lg hover:bg-secondary transition"
+          className="fixed z-50 bottom-4 right-4 p-3 bg-primary text-black rounded-full shadow-lg hover:bg-secondary transition"
           aria-label="Back to top"
         >
           <FaArrowUp size={24} /> 
